@@ -25,6 +25,13 @@
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
+            if (value != null && (value.GetType() == typeof(int) ||
+                                 value.GetType() == typeof(short) ||
+                                 value.GetType() == typeof(byte)))
+            {
+                writer.WriteValue(value.ToString());
+                return;
+            }
             writer.WriteValue(value);
         }
     }
