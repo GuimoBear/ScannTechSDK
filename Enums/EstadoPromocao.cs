@@ -9,20 +9,34 @@ namespace ScannTechSDK.Enums
     public enum EstadoPromocao
     {
         /// <summary>
-        /// Promoções que não foram aceitadas ou rejeitadas pelo minorista.
+        /// Promoção oferecida e já aceita
         /// </summary>
-        [EnumMember(Value = "PENDIENTE")]
-        Pendentes,
+        [EnumMember(Value = "ofrecida_aceptada")]
+        OferecidaEAceita,
+
         /// <summary>
-        /// Promoções aceitas pelo minorista.
+        /// Promoção oferecida e ainda não aceita
         /// </summary>
-        [EnumMember(Value = "ACEPTADA")]
-        Aceitas,
+        [EnumMember(Value = "ofrecida_pendiente")]
+        OferecidaEPendente,
+
         /// <summary>
-        /// Promoções rejeitadas pelo minorista.
+        /// Promoção oferecida e rejeitada
         /// </summary>
-        [EnumMember(Value = "RECHAZADA")]
-        Rejeitadas
+        [EnumMember(Value = "ofrecida_rechazada")]
+        OferecidaERejeitada,
+
+        /// <summary>
+        /// Promoção própria criada como esboço
+        /// </summary>
+        [EnumMember(Value = "propia_borrador")]
+        PropriaEsboco,
+
+        /// <summary>
+        /// Promoção própria já ativa
+        /// </summary>
+        [EnumMember(Value = "propia_activa")]
+        PropriaAtiva
     }
 
     public static class EstadoPromocaoExtensions

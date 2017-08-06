@@ -21,7 +21,7 @@ namespace ScannTechSDK.Mensagens.Promocao
                 if (!response.IsSuccessStatusCode)
                     throw new Exception($"A consulta retornou o código {response.StatusCode}");
                 var strResponse = await response.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<DefinicaoPromocoesResponse>(strResponse);
+                return DefinicaoPromocoesResponse.FromJson(strResponse);
             }
             catch (Exception ex)
             {

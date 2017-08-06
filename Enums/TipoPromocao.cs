@@ -8,16 +8,16 @@ namespace ScannTechSDK.Enums
     public enum TipoPromocao
     {
         [EnumMember(Value = "LLEVA_PAGA")]
-        LevaPaga,
+        LevaPaga = 1,
         [EnumMember(Value = "ADICIONAL_DESCUENTO")]
-        DescontoAdicional,
+        DescontoAdicional = 2,
         [EnumMember(Value = "ADICIONAL_REGALO")]
-        PresenteAdicional,
+        PresenteAdicional = 3,
         [EnumMember(Value = "PRECIO_FIJO")]
-        PrecoFixo,
+        PrecoFixo = 4,
         [EnumMember(Value = "DESCUENTO_VARIABLE")]
-        DescontoVariado,
+        DescontoVariado = 5,
         [EnumMember(Value = "DESCUENTO_FIJO")]
-        DescontoFixo
+        DescontoFixo = 6
     }
 }

@@ -906,6 +906,6 @@ namespace ScannTechSDK.Enums
         /// Zimbabwe dollar	 Zimbabwe
         /// </summary>
         [EnumMember(Value = "932")]
-        ZWL,
+        ZWL
     }
 }

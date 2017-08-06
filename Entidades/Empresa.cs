@@ -26,7 +26,7 @@ namespace ScannTechSDK.Entidades
         {
             get
             {
-                return $"{URL_BASE}{Codigo}/locales/{Local}/";
+                return $"{URL_BASE}{Codigo}/"; // locales/{Local}/
             }
         }
 
@@ -60,7 +60,7 @@ namespace ScannTechSDK.Entidades
                 result = new HttpRequestMessage(metodo, new Uri($"{BaseUrl}{path}"));
                 result.Headers.TryAddWithoutValidation("Content-Type", "application/json");
                 result.Headers.TryAddWithoutValidation("Accept", "application/json");
-                result.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("basic", MakeBase64String(Usuario + ":" + Senha));
+                result.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", MakeBase64String(Usuario + ":" + Senha));
                 return result;
             }
             catch (Exception ex)
